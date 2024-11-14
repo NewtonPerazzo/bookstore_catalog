@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 # bookstore_catalog
 Website para ver catálogo e alugar livros on-line.
-=======
+>>>>>>> feature/add-project-structure
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -52,4 +51,3 @@ export default tseslint.config({
   },
 })
 ```
->>>>>>> 8f269c2 (start project)
