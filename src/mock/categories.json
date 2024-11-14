@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Tecnologia"
+    },
+    {
+        "id": 2,
+        "name": "Terror"
+    },
+    {
+        "id": 3,
+        "name": "Romance"
+    },
+    {
+        "id": 4,
+        "name": "Guerra"
+    },
+    {
+        "id": 5,
+        "name": "Política"
+    },
+    {
+        "id": 6,
+        "name": "Ficção"
+    },
+    {
+        "id": 7,
+        "name": "Sagas"
+    },
+    {
+        "id": 8,
+        "name": "Música"
+    },
+    {
+        "id": 9,
+        "name": "Infantil"
+    },
+    {
+        "id": 10,
+        "name": "Culinária"
+    },
+    {
+        "id": 11,
+        "name": "Religioso"
+    },
+    {
+        "id": 12,
+        "name": "Natureza"
+    }
+]

@@ -1,0 +1,1 @@
+export type IStatus = 'rented' | 'available' | 'unavailable'
