@@ -1,0 +1,271 @@
+[
+    {
+        "id": 1,
+        "name": "Curso Python",
+        "author": {
+            "id": 1,
+            "name": "João"
+        },
+        "price": 9.00,
+        "status": "available",
+        "category": {
+            "id": 1,
+            "name": "Tecnologia"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Curso React",
+        "author": {
+            "id": 2,
+            "name": "Pedro"
+        },
+        "price": 10.40,
+        "status": "available",
+        "category": {
+            "id": 1,
+            "name": "Tecnologia"
+        }
+    },
+    {
+        "id": 14,
+        "name": "Curso Flutter",
+        "author": {
+            "id": 2,
+            "name": "Pedro"
+        },
+        "price": 12.00,
+        "status": "unavailable",
+        "category": {
+            "id": 1,
+            "name": "Tecnologia"
+        }
+    },
+    {
+        "id": 15,
+        "name": "Curso Java",
+        "author": {
+            "id": 2,
+            "name": "Pedro"
+        },
+        "price": 20.00,
+        "status": "rented",
+        "category": {
+            "id": 1,
+            "name": "Tecnologia"
+        }
+    },
+    {
+        "id": 16,
+        "name": "Curso C++",
+        "author": {
+            "id": 2,
+            "name": "Pedro"
+        },
+        "price": 25.00,
+        "status": "unavailable",
+        "category": {
+            "id": 1,
+            "name": "Tecnologia"
+        }
+    },
+    {
+        "id": 17,
+        "name": "Curso Docker",
+        "author": {
+            "id": 2,
+            "name": "Pedro"
+        },
+        "price": 5.00,
+        "status": "rented",
+        "category": {
+            "id": 1,
+            "name": "Tecnologia"
+        }
+    },
+    {
+        "id": 18,
+        "name": "Curso API",
+        "author": {
+            "id": 2,
+            "name": "Pedro"
+        },
+        "price": 4.00,
+        "status": "rented",
+        "category": {
+            "id": 1,
+            "name": "Tecnologia"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Halloween",
+        "author": {
+            "id": 3,
+            "name": "Maria"
+        },
+        "price": 3.00,
+        "status": "available",
+        "category": {
+            "id": 2,
+            "name": "Terror"
+        }
+    },
+    {
+        "id": 4,
+        "name": "I Love You",
+        "author": {
+            "id": 4,
+            "name": "Joaquim"
+        },
+        "price": 8.00,
+        "status": "available",
+        "category": {
+            "id": 3,
+            "name": "Romance"
+        }
+    },
+    {
+        "id": 5,
+        "name": "I Love You 2",
+        "author": {
+            "id": 4,
+            "name": "Joaquim"
+        },
+        "price": 10.00,
+        "status": "unavailable",
+        "category": {
+            "id": 3,
+            "name": "Romance"
+        }
+    },
+    {
+        "id": 6,
+        "name": "I World War",
+        "author": {
+            "id": 5,
+            "name": "Rafael"
+        },
+        "price": 10.00,
+
+        "status": "rented",
+        "category": {
+            "id": 4,
+            "name": "Guerra"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Geopolítica mundial",
+        "author": {
+            "id": 6,
+            "name": "Rafael S."
+        },
+        "price": 17.00,
+        "status": "unavailable",
+        "category": {
+            "id": 5,
+            "name": "Política"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Frankstein Brasileiro",
+        "author": {
+            "id": 7,
+            "name": "Joana"
+        },
+        "price": 10.00,
+
+        "status": "rented",
+        "category": {
+            "id": 6,
+            "name": "Ficção"
+        }
+    },
+    {
+        "id": 9,
+        "name": "Harry Potter",
+        "author": {
+            "id": 8,
+            "name": "JK Rowling"
+        },
+        "price": 1.00,
+        "status": "rented",
+        "category": {
+            "id": 7,
+            "name": "Sagas"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Lemmy: biografia",
+        "author": {
+            "id": 9,
+            "name": "Jhon"
+        },
+        "price": 10.00,
+
+        "status": "rented",
+        "category": {
+            "id": 8,
+            "name": "Música"
+        }
+    },
+    {
+        "id": 11,
+        "name": "Os 3 Porquinhos: versão Brasil",
+        "author": {
+            "id": 10,
+            "name": "Pedro A."
+        },
+        "price": 10.00,
+        "status": "available",
+        "category": {
+            "id": 9,
+            "name": "Infantil"
+        }
+    },
+    {
+        "id": 12,
+        "name": "Melhores receitas: comida brasileira",
+        "author": {
+            "id": 11,
+            "name": "Henrique Fogaça"
+        },
+        "price": 40.00,
+        "status": "rented",
+        "category": {
+            "id": 10,
+            "name": "Culinária"
+        }
+    },
+    {
+        "id": 13,
+        "name": "Deus e Eu",
+        "author": {
+            "id": 12,
+            "name": "Juliana P."
+        },
+        "price": 4.00,
+        "status": "rented",
+        "category": {
+            "id": 11,
+            "name": "Religioso"
+        }
+    },
+    {
+        "id": 14,
+        "name": "Desvendando a Biologia",
+        "author": {
+            "id": 13,
+            "name": "Fernanda"
+        },
+        "price": 4.80,
+        "status": "rented",
+        "category": {
+            "id": 12,
+            "name": "Natureza"
+        }
+    }
+]
