@@ -3,7 +3,6 @@ import { useState } from "react";
 import { IBook, ICategory } from "../../types";
 import Book from "../Book";
 import { BooksContainer, BooksSlider, Container, SeeMoreTitle, Title } from "./style"
-import { rentABook } from "../../services/books";
 import Modal from "../Modal";
 import { getLocalStorage, setLocalStorage } from "../../storage";
 
