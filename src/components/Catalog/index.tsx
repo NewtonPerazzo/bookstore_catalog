@@ -60,12 +60,6 @@ const Catalog = ({ categories, books }: CatalogProps) => {
     const handleCloseModal = () => setShowRentModal(false)
 
     const handleConfirmRent = async () => {
-        try {
-            await rentABook(book?.id)
-        }
-        catch (error) {
-            console.log(error)
-        }
         if(cart.find((bookCart: IBook) => bookCart.id === book?.id)){
             alert('Livro já adicionado.')
         } else{

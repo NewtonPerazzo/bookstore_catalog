@@ -15,7 +15,6 @@ import {
 } from "./style"
 import { IBook } from "../../types"
 import Modal from "../Modal"
-import { books } from "../../mock/books"
 import { rentABook } from "../../services/books"
 
 const Cart = () => {
