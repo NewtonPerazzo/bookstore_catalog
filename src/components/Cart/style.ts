@@ -1,16 +1,22 @@
 import styled from 'styled-components';
 
-const Container = styled.div<{ height?: string}>`
-  width: 100%;
+const Container = styled.div<{ height?: string, width?: string}>`
   align-items: center;
 
+  width: ${({ width }) => width || '100vw'};
   height: ${({ height }) => height || '100%'};
+
+  @media(max-width: 900px){
+    display: flex;
+    justify-content: center;
+  }
 `;
 
-const Title = styled.p`
+const Title = styled.p<{ isToHide?: boolean }>`
   font-size: 18px;
   font-weight: bold;
   color: #fff;
+  ${({ isToHide }) => isToHide && "display: none"}
 `
 
 const TotalText = styled.p`
@@ -19,20 +25,25 @@ const TotalText = styled.p`
   color: #007bff;
 `
 
-const ClearCart = styled.p`
+const ClearCart = styled.p<{ isToHide?: boolean }>`
   font-size: 14px;
   color: #fff;
   cursor: pointer;
+  ${({ isToHide }) => isToHide && "display: none;"}
 
   &:hover {
     color: red;
   }
 `
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.div<{ isToMinimize?: boolean }>`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media(max-width: 900px){
+    ${({ isToMinimize }) => isToMinimize && "justify-content: center;"}
+  }
 `
 
 const BookContainer = styled.div`
@@ -41,15 +52,17 @@ const BookContainer = styled.div`
   justify-content: space-between;
 `
 
-const CartInfoContainer = styled.div`
+const CartInfoContainer = styled.div<{ isToHide?: boolean }>`
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: space-between;
+
+  ${({ isToHide }) => isToHide && "display: none;"}
 `
 
 const TotalContainer = styled.div`
-padding: 20px 0;
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -64,7 +77,7 @@ const ButtonTotal = styled.button`
   cursor: pointer;
 `
 
-const MinimizeButton = styled.div`
+const MinimizeButton = styled.div<{ isToHide?: boolean }>`
   height: 20px;
   width: 20px;
   border-radius: 100%;
@@ -75,9 +88,11 @@ const MinimizeButton = styled.div`
   justify-content: center;
   color: #FFF;
 
-  @media (min-width: 900px) {
+  @media(min-width: 900px){
     display: none;
   }
+
+  ${({ isToHide }) => isToHide && "display: none;"}
 `
 
 const BookInfo = styled.p`
