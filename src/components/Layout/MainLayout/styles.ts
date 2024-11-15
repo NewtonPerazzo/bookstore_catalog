@@ -30,8 +30,8 @@ const ContainerSide = styled.div<{ isLeft?: boolean }>`
 
     ${({ isLeft }) => isLeft && `
         @media (max-width: 900px) {
-            border-top-left-radius: 10px;
             border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
             height: auto;
             position: fixed;
             bottom: 0;
@@ -41,8 +41,8 @@ const ContainerSide = styled.div<{ isLeft?: boolean }>`
             padding: 10px;
         }
     `}
-    @media (max-width: 900px) {
-        width: ${({ isLeft }) => isLeft ? '60%' : '100%'};
-    }
+     @media (max-width: 900px) {
+        width: ${({ isLeft }) => (isLeft ? 'fit-content' : '100%')};
+    }   
 `;
 export { Container, ContainerColumns, ContainerSide };

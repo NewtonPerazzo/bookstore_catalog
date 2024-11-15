@@ -22,8 +22,10 @@ const Cart = () => {
     const [cartState, setCartState] = useState<IBook[]>([])
     const [totalPrice, setTotalPrice] = useState<number>(0)
     const [heightMobileCart, setHeightMobileCart] = useState<string>('100%')
+    const [widthMobileCart, setWidthMobileCart] = useState<string>('100%')
     const [showRentModal, setShowRentModal] = useState(false)
     const { t } = useTranslation();
+    const isCartMobile = heightMobileCart === '40px'
 
     const Strings = {
         EMPTY_CART: t('emptyCart'),
@@ -45,7 +47,10 @@ const Cart = () => {
         await rentABook(cartState)
     }
 
-    const handleClickOnMinimize = () => setHeightMobileCart(heightMobileCart === '30px' ? '100%' : '30px')
+    const handleClickOnMinimize = () => {
+        setHeightMobileCart(heightMobileCart === '40px' ? '100%' : '40px')
+        setWidthMobileCart(widthMobileCart === '40px' ? '100%' : '40px')
+    }
 
     const getCartFromStorage = () => {
         const cart = JSON.parse(getLocalStorage('cart') || '[]')
@@ -76,18 +81,18 @@ const Cart = () => {
     }, [])
 
     return (
-        <Container height={heightMobileCart}>
+        <Container height={heightMobileCart} width={widthMobileCart}>
             <div>
-                <HeaderContainer>
+                <HeaderContainer isToMinimize={heightMobileCart === '40px'}>
                     <MinimizeButton onClick={handleClickOnMinimize}>
-                        {heightMobileCart === '30px' ? '+' : '-'}
+                        {isCartMobile ? '+' : '-'}
                     </MinimizeButton>
-                    <Title onClick={handleClickOnMinimize}>{Strings.CART}</Title>
-                    {hasCart ? <ClearCart onClick={() => removeLocalStorage('cart')}>{Strings.CLEAR}</ClearCart> : <div />}
+                    <Title onClick={handleClickOnMinimize} isToHide={isCartMobile}>{Strings.CART}</Title>
+                    {hasCart && !(isCartMobile) ? <ClearCart onClick={() => removeLocalStorage('cart')}>{Strings.CLEAR}</ClearCart> : <div />}
                 </HeaderContainer>
 
                 {hasCart ? 
-                    <CartInfoContainer>
+                    <CartInfoContainer isToHide={isCartMobile}>
                         {cartState.map((book: IBook) => (
                             <BookContainer key={book.id}>
                                 <BookInfo>{book.name}</BookInfo>
