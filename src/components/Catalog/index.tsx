@@ -5,6 +5,7 @@ import Book from "../Book";
 import { BooksContainer, BooksSlider, Container, SeeMoreTitle, Title } from "./style"
 import Modal from "../Modal";
 import { getLocalStorage, setLocalStorage } from "../../storage";
+import { useTranslation } from "react-i18next";
 
 interface CatalogProps { 
     categories?: ICategory[];
@@ -18,6 +19,17 @@ const Catalog = ({ categories, books }: CatalogProps) => {
     const [isToShowMore, setIsToShowMore] = useState(false)
     const [book, setBook] = useState({} as IBook)
     const cart = JSON.parse(getLocalStorage('cart') || '[]')
+    const { t } = useTranslation()
+
+    const Strings = {
+        SEE_MORE: t('seeMore'),
+        SEE_LESS: t('seeLess'),
+        BOOK_ALREADY_ADDED: t('bookAlreadyAdded'),
+        CATALOG: t('catalog'),
+        LOADING: t('loading'),
+        DO_YOU_WANT_RENT: t('doYouWantToRent', { book: book.name }),
+        CLICK_TO_CONFIRM: t('clickToConfirm', { book: book.name })
+    }
 
     const handleClickOnShowMore = () => {
         if(isToShowMore) {
@@ -60,7 +72,7 @@ const Catalog = ({ categories, books }: CatalogProps) => {
 
     const handleConfirmRent = async () => {
         if(cart.find((bookCart: IBook) => bookCart.id === book?.id)){
-            alert('Livro já adicionado.')
+            alert(Strings.BOOK_ALREADY_ADDED)
         } else{
 
             setLocalStorage("cart", JSON.stringify([...cart, book]));
@@ -71,17 +83,17 @@ const Catalog = ({ categories, books }: CatalogProps) => {
     return (
         <Container isToShowMore={isToShowMore}>
             <div style={{ width: '100%' }}>
-                <Title>Catálogo</Title>
+                <Title>{Strings.CATALOG}</Title>
                 {categories && books ? (
                     <>
                         {renderCategories()}
                         
                         {categories && categories.length > LIMIT && (
-                            <SeeMoreTitle onClick={() => handleClickOnShowMore()}><p>Ver {isToShowMore ? 'menos' : 'mais'}</p></SeeMoreTitle>
+                            <SeeMoreTitle onClick={() => handleClickOnShowMore()}><p>{isToShowMore ? Strings.SEE_LESS : Strings.SEE_MORE}</p></SeeMoreTitle>
                         )}
                     </>
                 ) : (
-                    <div>Carregando...</div>
+                    <div>{Strings.LOADING}</div>
                 )}
                 
             </div>
@@ -90,8 +102,8 @@ const Catalog = ({ categories, books }: CatalogProps) => {
                 isOpen={showRentModal}
                 onClose={handleCloseModal}
                 onConfirm={handleConfirmRent}
-                title={`Deseja alugar ${book?.name}?`}
-                content={`Clique em confirmar para adicionar o livro ${book?.name} ao carrinho.`}
+                title={Strings.DO_YOU_WANT_RENT}
+                content={Strings.CLICK_TO_CONFIRM}
             />
         </Container>
     )

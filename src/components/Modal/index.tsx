@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, ButtonContainer, ModalBody, ModalContainer, ModalHeader, Overlay } from './styles';
+import { useTranslation } from 'react-i18next';
 
 interface ModalProps {
     isOpen: boolean
@@ -10,7 +11,13 @@ interface ModalProps {
 }
 
 const Modal = ({ isOpen, onClose, title, content, onConfirm }: ModalProps) => {
+  const { t } = useTranslation() 
   if (!isOpen) return null;
+
+  const Strings = {
+    CLOSE: t('close'),
+    CONFIRM: t('confirm')
+  }
 
   return (
     <>
@@ -20,8 +27,8 @@ const Modal = ({ isOpen, onClose, title, content, onConfirm }: ModalProps) => {
         <ModalBody>{content}</ModalBody>
 
         <ButtonContainer>
-          <Button onClick={onClose}>Close</Button>
-          {onConfirm && <Button onClick={onConfirm}>Confirmar</Button>}
+          <Button onClick={onClose}>{Strings.CLOSE}</Button>
+          {onConfirm && <Button onClick={onConfirm}>{Strings.CONFIRM}</Button>}
         </ButtonContainer>
       </ModalContainer>
     </>

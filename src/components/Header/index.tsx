@@ -1,3 +1,4 @@
+import ChooseLanguage from "../ChooseLanguage"
 import { Container } from "./style"
 
 const Header = () => {
@@ -5,7 +6,7 @@ const Header = () => {
         <Container>
             <div />
             <h1>BookStore</h1>
-            <div />
+            <ChooseLanguage />
         </Container>
     )
 }

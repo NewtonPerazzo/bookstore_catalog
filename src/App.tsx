@@ -7,6 +7,7 @@ import Catalog from './components/Catalog'
 import { categories } from './mock/categories'
 import { books } from './mock/books'
 import Cart from './components/Cart'
+import './i18n';
 
 function App() {
   // const [categoriesState, setCategories] = useState<ICategory[] | undefined>([])
