@@ -17,7 +17,7 @@ describe('Modal Component', () => {
     render(<Modal isOpen={true} onClose={mockOnClose} onConfirm={mockOnConfirm} title="Modal Title" content="Modal Content" />);
 
     const modalContainer = screen.getByRole('dialog');
-    expect(modalContainer).toHaveStyle('display: block'); // Verifica se o modal está visível
+    expect(modalContainer).toHaveStyle('display: block');
 
     
     const title = screen.getByText('Modal Title');
