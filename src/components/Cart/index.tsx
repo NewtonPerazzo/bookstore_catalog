@@ -102,7 +102,7 @@ const Cart = () => {
 
                         <TotalContainer>
                             <TotalText>{Strings.TOTAL}{totalPrice.toFixed(2)}</TotalText>
-                            <ButtonTotal onClick={() => setShowRentModal(true)}>{Strings.FINISH}</ButtonTotal>
+                            <ButtonTotal data-testid="finish-button" onClick={() => setShowRentModal(true)}>{Strings.FINISH}</ButtonTotal>
                         </TotalContainer>
 
                     </CartInfoContainer>

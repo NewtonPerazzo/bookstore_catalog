@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
-const Overlay = styled.div<{ isOpen: boolean }>`
-  display: ${({ isOpen }) => (isOpen ? '' : 'none')};
+interface ModalProps {
+  isOpen: boolean;
+}
+
+const Overlay = styled.div<ModalProps>`
+  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')}; /* Controla a exibição do overlay */
   position: fixed;
   top: 0;
   left: 0;
@@ -14,8 +18,8 @@ const Overlay = styled.div<{ isOpen: boolean }>`
   transition: opacity 0.3s ease-in-out;
 `;
 
-const ModalContainer = styled.div<{ isOpen: boolean }>`
-  display: ${({ isOpen }) => (isOpen ? '' : 'none')};
+const ModalContainer = styled.div<ModalProps>`
+  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')}; /* Controla a exibição do modal */
   position: fixed;
   top: 50%;
   left: 50%;

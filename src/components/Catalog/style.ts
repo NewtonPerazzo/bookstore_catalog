@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
-const Container = styled.div<{ isToShowMore: boolean }>`
+const Container = styled.div.attrs<{ isToShowMore: boolean }>(props => ({
+  style: {
+    overflowY: props.isToShowMore ? 'scroll' : 'hidden',
+  },
+}))`
   width: 100%;
   height: 100%;
   display: flex;
-  overflow-y: ${({ isToShowMore }) => (isToShowMore ? 'scroll' : 'hidden')};
 
   &::-webkit-scrollbar {
     margin-top: 5px;

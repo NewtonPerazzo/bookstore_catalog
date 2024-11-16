@@ -33,7 +33,7 @@ const Book = ({ book, handleClickRentButton }: BookProps) => {
             <Subtitle color="#007bff">{Strings.COIN} {price.toFixed(2)}</Subtitle>
 
             <ContainerButton>
-                <Button disabled={disabled} onClick={handleClickRentButton} status={status}>{buttonTitle[status]}</Button>
+                <Button data-testid={`book-button-${book.id}`} disabled={disabled} onClick={handleClickRentButton} status={status}>{buttonTitle[status]}</Button>
             </ContainerButton>
         </Container>
     )
