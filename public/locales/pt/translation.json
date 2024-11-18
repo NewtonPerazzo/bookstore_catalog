@@ -21,5 +21,6 @@
     "coin": "R$ ",
     "rented": "Alugado",
     "available": "Disponível",
-    "unavailable": "Indisponível"
+    "unavailable": "Indisponível",
+    "developedBy": "Desenvolvido por "
 }
