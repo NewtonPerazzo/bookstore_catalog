@@ -22,5 +22,6 @@
     "rented": "Rented",
     "available": "Available",
     "unavailable": "Unavailable",
-    "developedBy": "Developed by "
+    "developedBy": "Developed by ",
+    "loading": "Loading..."
 }

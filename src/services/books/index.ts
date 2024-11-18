@@ -1,4 +1,5 @@
 import { BASE_URL, BOOKS_URI, RENT } from "..";
+import { books } from "../../mock/books";
 import { IBook } from "../../types";
 
 export const getBooks = async () => {
@@ -8,6 +9,7 @@ export const getBooks = async () => {
     }
     catch (error) {
         console.log(error)
+        return books
     }
 }
 

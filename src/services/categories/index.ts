@@ -1,4 +1,5 @@
 import { BASE_URL, CATEGORIES_URI } from "..";
+import { categories } from "../../mock/categories";
 
 export const getCategories = async () => {
     try{    
@@ -7,5 +8,6 @@ export const getCategories = async () => {
     }
     catch (error) {
         console.log(error)
+        return categories
     }
 }

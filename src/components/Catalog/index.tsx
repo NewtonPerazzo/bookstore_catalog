@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IBook, ICategory } from "../../types";
 import Book from "../Book";
 import { BooksContainer, BooksSlider, Container, SeeMoreTitle, Title } from "./style"
@@ -79,6 +79,10 @@ const Catalog = ({ categories, books }: CatalogProps) => {
         }
         handleCloseModal()
     }
+
+    useEffect(() => {
+        setCategoriesToUse(categories?.slice(0, LIMIT))
+    }, [categories])
 
     return (
         <Container isToShowMore={isToShowMore}>
