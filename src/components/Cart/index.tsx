@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { getLocalStorage, removeLocalStorage } from "../../storage"
 import { 
     Container, 
@@ -18,14 +18,20 @@ import Modal from "../Modal"
 import { rentABook } from "../../services/books"
 import { useTranslation } from "react-i18next"
 
+const CONTAINER_SIZE_ON_MINIMIZE = "40px"
+const CONTAINER_SIZE_ON_MAXIMIZE = "100%"
+const BREAKPOINT = 900
+const CONTAINZER_SIZE_ON_MINIMIZE_NUMBER = 40
+
 const Cart = () => {
     const [cartState, setCartState] = useState<IBook[]>([])
     const [totalPrice, setTotalPrice] = useState<number>(0)
-    const [heightMobileCart, setHeightMobileCart] = useState<string>('100%')
-    const [widthMobileCart, setWidthMobileCart] = useState<string>('100%')
+    const [heightMobileCart, setHeightMobileCart] = useState<string>(CONTAINER_SIZE_ON_MAXIMIZE)
+    const [widthMobileCart, setWidthMobileCart] = useState<string>(CONTAINER_SIZE_ON_MAXIMIZE)
     const [showRentModal, setShowRentModal] = useState(false)
+    const containerRef = useRef<HTMLDivElement>(null)
     const { t } = useTranslation();
-    const isCartMobile = heightMobileCart === '40px'
+    const isCartMobile = heightMobileCart === CONTAINER_SIZE_ON_MINIMIZE
 
     const Strings = {
         EMPTY_CART: t('emptyCart'),
@@ -48,8 +54,8 @@ const Cart = () => {
     }
 
     const handleClickOnMinimize = () => {
-        setHeightMobileCart(heightMobileCart === '40px' ? '100%' : '40px')
-        setWidthMobileCart(widthMobileCart === '40px' ? '100%' : '40px')
+        setHeightMobileCart(heightMobileCart === CONTAINER_SIZE_ON_MINIMIZE ? CONTAINER_SIZE_ON_MAXIMIZE : CONTAINER_SIZE_ON_MINIMIZE)
+        setWidthMobileCart(widthMobileCart === CONTAINER_SIZE_ON_MINIMIZE ? CONTAINER_SIZE_ON_MAXIMIZE : CONTAINER_SIZE_ON_MINIMIZE)
     }
 
     const getCartFromStorage = () => {
@@ -80,10 +86,28 @@ const Cart = () => {
         }
     }, [])
 
+    useEffect(() => {
+        const checkContainerSize = () => {
+            if (window.innerWidth > BREAKPOINT && containerRef.current) {
+                const { offsetWidth, offsetHeight } = containerRef.current
+                if (offsetWidth === CONTAINZER_SIZE_ON_MINIMIZE_NUMBER && offsetHeight === CONTAINZER_SIZE_ON_MINIMIZE_NUMBER) {
+                    setHeightMobileCart(CONTAINER_SIZE_ON_MAXIMIZE)
+                    setWidthMobileCart(CONTAINER_SIZE_ON_MAXIMIZE)
+                }
+            }
+        }
+
+        window.addEventListener("resize", checkContainerSize)
+
+        return () => {
+            window.removeEventListener("resize", checkContainerSize)
+        }
+    }, [])  
+
     return (
-        <Container height={heightMobileCart} width={widthMobileCart}>
+        <Container ref={containerRef} height={heightMobileCart} width={widthMobileCart}>
             <div>
-                <HeaderContainer isToMinimize={heightMobileCart === '40px'}>
+                <HeaderContainer isToMinimize={heightMobileCart === CONTAINER_SIZE_ON_MINIMIZE}>
                     <MinimizeButton onClick={handleClickOnMinimize}>
                         {isCartMobile ? '+' : '-'}
                     </MinimizeButton>

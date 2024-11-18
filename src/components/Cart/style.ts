@@ -3,8 +3,8 @@ import styled from 'styled-components';
 const Container = styled.div<{ height?: string, width?: string}>`
   align-items: center;
 
-  width: ${({ width }) => width || '100vw'};
-  height: ${({ height }) => height || '100%'};
+  width: ${({ width }) => width || '100%'};
+  height: ${({ height }) => height};
 
   @media(max-width: 900px){
     display: flex;
