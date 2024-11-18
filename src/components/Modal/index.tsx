@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, ButtonContainer, ModalBody, ModalContainer, ModalHeader, Overlay } from './styles';
 import { useTranslation } from 'react-i18next';
 
@@ -7,7 +6,7 @@ interface ModalProps {
     onClose: () => void;
     onConfirm?: () => void;
     title?: string;
-    content?: React.ReactNode;
+    content?: JSX.Element | string;
 }
 
 const Modal = ({ isOpen, onClose, title, content, onConfirm }: ModalProps) => {
