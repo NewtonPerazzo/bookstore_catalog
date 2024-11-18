@@ -1,53 +1,74 @@
-# bookstore_catalog
-Website para ver catálogo e alugar livros on-line.
->>>>>>> feature/add-project-structure
-# React + TypeScript + Vite
+# 📚 BookStore (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a library application designed for both mobile and web use, developed with **React** and **Vite**. Users can view a book catalog and add items to a cart for rental. The project uses **mock data** and simulates real API calls.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🛠️ Technologies Used
 
-## Expanding the ESLint configuration
+### **Languages and Tools**
+- **React**: Framework for building interactive and responsive interfaces.
+- **Vite**: Tool for a fast development environment.
+- **TypeScript**: Adding static typing.
+- **Styled Components**: Library for dynamic styling using CSS-in-JS.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+### **Libraries**
+- **i18n**: Translation and internationalization management.
+- **Jest**: Unit testing framework.
+- **Husky**: Pre-commit hooks tool to enforce best coding practices.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 🏗️ Project Structure
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Responsive Layout
+The interface follows a well-structured layout:
+1. **Left Column**: Shopping cart where selected books are displayed for rental.
+2. **Right Column**: Book catalog with mock data to simulate the listing of options.
+3. **Header**: Top bar for navigation or additional information.
+4. **Footer**: Bottom bar with potential links or credits.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Styling is managed with **Styled Components**, enabling organized and reusable styles.
+
+---
+
+### 🛠️ How to Run the Project
+
+1. Clone the [repository](https://github.com/NewtonPerazzo/bookstore_catalog):
+  ```git clone <repository-ssh-or-link>```
+2. Install dependencies:
+  ```yarn```
+3. Start the project:
+  ```yarn dev```
+4. Open the project in your browser at http://localhost:5173
+
+---
+
+### 🧪 Tests
+The project uses Jest to ensure code quality. To run the tests, execute:
+```yarn test```
+
+---
+
+### 🛡️ Husky - Pre-commit Hooks
+Husky is configured to run automated tasks before each commit, ensuring code quality and consistency.
+
+---
+
+### 🌍 Internationalization
+The application supports multiple languages using i18n, making it easy to expand and translate into new languages.
+
+---
+
+### 🗂️ Folder Structure
+    📂 /src
+
+        📂 /components       # Reusable components
+        📂 /services          # Services and API call simulations
+        📂 /mock              # Project mocks
+        📂 /types             # Data type definitions
+        📂 /storage           # Functions to store/remove/fetch data from local storage
+
+    App.tsx                  # Main component
+
