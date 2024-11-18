@@ -1,3 +1,4 @@
+import Footer from "../../Footer"
 import Header from "../../Header"
 import { Container, ContainerColumns, ContainerSide } from "./styles"
 
@@ -19,6 +20,7 @@ const MainLayout = ({ rightElement, leftElement }: MainLayoutProps) => {
                     {rightElement}
                 </ContainerSide>
             </ContainerColumns>
+            <Footer />
         </Container>
     )
 }
