@@ -9,4 +9,5 @@ export type IBook = {
     status: IStatus
     author: IAuthor
     price: number
+    image: string
 }

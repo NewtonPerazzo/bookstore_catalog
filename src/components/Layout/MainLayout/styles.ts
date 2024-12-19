@@ -40,6 +40,7 @@ const ContainerSide = styled.div<{ isLeft?: boolean }>`
             background-color: #007bff;
             padding: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 99999;
         }
     `}
      @media (max-width: 900px) {

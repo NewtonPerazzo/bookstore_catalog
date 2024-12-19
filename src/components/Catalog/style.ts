@@ -35,6 +35,7 @@ const BooksContainer = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  text-align: flex-end;
 `;
 
 const BooksSlider = styled.div`
@@ -43,6 +44,8 @@ const BooksSlider = styled.div`
   gap: 8px;
   overflow-x: scroll;
   padding-bottom: 10px;
+  height: 180px;
+  margin-top: 20px;
 
   &::-webkit-scrollbar {
     height: 5px;
@@ -79,4 +82,59 @@ const SeeMoreTitle = styled.div`
   }
 `;
 
-export { Container, Title, BooksSlider, BooksContainer, SeeMoreTitle };
+const CategoryStyle = styled.div`
+  display: inline-block;
+  font-size: 26px;
+  width: auto;
+  font-weight: bold;
+  font-style: italic;
+`;
+
+const CategoryDiv = styled.div`
+  width: 20%;
+  display: flex;
+  color: #007bff;
+  align-self: flex-end;
+  justify-content: flex-end;
+  border-bottom: 6px solid #007bff;
+`;
+
+const BorderCategory = styled.div<{ color?: string}>`
+  width: 16px;
+  height: 6px;
+  display: flex;
+  background-color:${({ color }) => color || " #007bff"};
+  align-self: flex-end;
+  justify-content: flex-end;
+  transform: skewX(-50deg);
+  margin-right: 10px;
+`;
+
+const BorderCategoryLast = styled.div`
+  width: 16px;
+  height: 6px;
+  display: flex;
+  background-color: #007bff;
+  align-self: flex-end;
+  justify-content: flex-end;
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+`;
+
+const CategoryContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+`;
+
+export { 
+  Container, 
+  Title, 
+  BooksSlider, 
+  BooksContainer, 
+  SeeMoreTitle, 
+  CategoryStyle, 
+  CategoryDiv, 
+  BorderCategory, 
+  BorderCategoryLast, 
+  CategoryContainer 
+};

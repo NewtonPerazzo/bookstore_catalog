@@ -4,10 +4,11 @@
         "name": "Curso Python",
         "author": {
             "id": 1,
-            "name": "João"
+            "name": "João Pedro Roberto de Souza Guimarães da Silva"
         },
         "price": 9.00,
         "status": "available",
+        "image": "https://i0.wp.com/junilearning.com/wp-content/uploads/2020/06/python-programming-language.webp?fit=1920%2C1920&ssl=1",
         "category": {
             "id": 1,
             "name": "Tecnologia"
@@ -22,6 +23,7 @@
         },
         "price": 10.40,
         "status": "available",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCelkmWfnQkGmyWNujbuC9mF04Ww5rGRN1vA&s",
         "category": {
             "id": 1,
             "name": "Tecnologia"
@@ -34,6 +36,7 @@
             "id": 2,
             "name": "Pedro"
         },
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4AEHGr224PqMU39fjcng-l9cbqTw2gzayVA&s",
         "price": 12.00,
         "status": "unavailable",
         "category": {
@@ -48,6 +51,7 @@
             "id": 2,
             "name": "Pedro"
         },
+        "image": "https://uploads.sempreupdate.com.br/2024/09/mqkt4m7F-java-oracle-768x432.webp",
         "price": 20.00,
         "status": "rented",
         "category": {
@@ -64,6 +68,7 @@
         },
         "price": 25.00,
         "status": "unavailable",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-FMOSFbVDTAgCh1QVnWbHEbXu63gTrnMnjQ&s",
         "category": {
             "id": 1,
             "name": "Tecnologia"
@@ -72,6 +77,7 @@
     {
         "id": 17,
         "name": "Curso Docker",
+        "image": "data:image/png;base64,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",
         "author": {
             "id": 2,
             "name": "Pedro"
@@ -86,6 +92,7 @@
     {
         "id": 18,
         "name": "Curso API",
+        "image": "https://blog.ebaconline.com.br/blog/wp-content/uploads/2023/09/image4-2.png",
         "author": {
             "id": 2,
             "name": "Pedro"
@@ -100,6 +107,7 @@
     {
         "id": 3,
         "name": "Halloween",
+        "image": "https://c.files.bbci.co.uk/11DE7/production/_104019137_gettyimages-844232562.jpg",
         "author": {
             "id": 3,
             "name": "Maria"
@@ -114,6 +122,7 @@
     {
         "id": 4,
         "name": "I Love You",
+        "image": "https://img.freepik.com/vetores-premium/decorativo-love-you-tipografia-com-fonte-ludica-em-fundo-branco-ilustracao_1090394-65554.jpg?semt=ais_hybrid",
         "author": {
             "id": 4,
             "name": "Joaquim"
@@ -128,6 +137,7 @@
     {
         "id": 5,
         "name": "I Love You 2",
+        "image": "https://m.media-amazon.com/images/I/617ZTSUsGPL._AC_UF1000,1000_QL80_.jpg",
         "author": {
             "id": 4,
             "name": "Joaquim"
@@ -142,6 +152,7 @@
     {
         "id": 6,
         "name": "I World War",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR75U-OCOJ1FBGrgFeoIjPTM68csOUXOtV-Qg&s",
         "author": {
             "id": 5,
             "name": "Rafael"
@@ -157,6 +168,7 @@
     {
         "id": 7,
         "name": "Geopolítica mundial",
+        "image": "https://static.mundoeducacao.uol.com.br/mundoeducacao/2022/08/geopolitica.jpg",
         "author": {
             "id": 6,
             "name": "Rafael S."
@@ -171,6 +183,7 @@
     {
         "id": 8,
         "name": "Frankstein Brasileiro",
+        "image": "https://blog.alelo.com.br/wp-content/uploads/2024/01/MONSTRO@FRANK.jpeg",
         "author": {
             "id": 7,
             "name": "Joana"
@@ -186,6 +199,7 @@
     {
         "id": 9,
         "name": "Harry Potter",
+        "image": "https://t.ctcdn.com.br/Fvptbj1dqz44LSHULZhyU9K-KIQ=/1024x576/smart/i525540.jpeg",
         "author": {
             "id": 8,
             "name": "JK Rowling"
@@ -200,6 +214,7 @@
     {
         "id": 10,
         "name": "Lemmy: biografia",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkeF0qOpjDfjyeJh5p2oW3tBm2h2sigYehsg&s",
         "author": {
             "id": 9,
             "name": "Jhon"
@@ -215,6 +230,7 @@
     {
         "id": 11,
         "name": "Os 3 Porquinhos: versão Brasil",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRUfd9vZTZ8DSziV1Z6wiJZHnlzbD7SK5UaA&s",
         "author": {
             "id": 10,
             "name": "Pedro A."
@@ -229,6 +245,7 @@
     {
         "id": 12,
         "name": "Melhores receitas: comida brasileira",
+        "image": "https://i.panelinha.com.br/i1/bn-3864-receita-bobo.webp",
         "author": {
             "id": 11,
             "name": "Henrique Fogaça"
@@ -243,6 +260,7 @@
     {
         "id": 13,
         "name": "Deus e Eu",
+        "image": "https://yt3.googleusercontent.com/2ieT8WrarJXdZKS45cb0M7bmmigQz0du_k4yVCQUBKkGJAOonDUNz-Ye25MDcaO2W0FD70uM=s900-c-k-c0x00ffffff-no-rj",
         "author": {
             "id": 12,
             "name": "Juliana P."
@@ -257,6 +275,7 @@
     {
         "id": 14,
         "name": "Desvendando a Biologia",
+        "image": "https://s1.static.brasilescola.uol.com.br/be/conteudo/images/biologia.jpg",
         "author": {
             "id": 13,
             "name": "Fernanda"

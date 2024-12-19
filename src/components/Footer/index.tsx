@@ -10,7 +10,7 @@ const Footer = () => {
 
     return (
         <Container>
-            <p>{Strings.DEVELOPED_BY} - 2024</p>
+            <p>{Strings.DEVELOPED_BY} Newton Perazzo - 2024</p>
 
             <div>
                 <a href="https://www.linkedin.com/in/newton-perazzo/" target="_blank"><p>LinkedIn </p></a>

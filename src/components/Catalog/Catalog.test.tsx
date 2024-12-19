@@ -33,10 +33,10 @@ describe("Catalog Component", () => {
   ];
 
   const mockBooks: IBook[] = [
-    { id: 101, name: "Book 1", category: { id: 1, name: "Fiction" }, author: { id: 1, name: 'Pedro' }, status: 'rented', price: 20 },
-    { id: 102, name: "Book 2", category: { id: 2, name: "Science" }, author: { id: 1, name: 'Pedro' }, status: 'rented', price: 20 },
-    { id: 103, name: "Book 3", category: { id: 3, name: "History" }, author: { id: 1, name: 'Pedro' }, status: 'rented', price: 20 },
-    { id: 104, name: "Book 4", category: { id: 4, name: "Fantasy" }, author: { id: 1, name: 'Pedro' }, status: 'rented', price: 20 },
+    { id: 101, name: "Book 1", category: { id: 1, name: "Fiction" }, image: "", author: { id: 1, name: 'Pedro' }, status: 'rented', price: 20 },
+    { id: 102, name: "Book 2", category: { id: 2, name: "Science" }, image: "", author: { id: 1, name: 'Pedro' }, status: 'rented', price: 20 },
+    { id: 103, name: "Book 3", category: { id: 3, name: "History" }, image: "", author: { id: 1, name: 'Pedro' }, status: 'rented', price: 20 },
+    { id: 104, name: "Book 4", category: { id: 4, name: "Fantasy" }, image: "", author: { id: 1, name: 'Pedro' }, status: 'rented', price: 20 },
   ];
 
   it("renders the catalog with limited categories by default", () => {

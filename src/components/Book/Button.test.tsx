@@ -19,6 +19,7 @@ describe('Book Component', () => {
     author: { id: 1, name: 'João' },
     status: 'available' as IStatus,
     price: 19.99,
+    image: "https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=754&fit=clip"
   };
 
   test('should render book details correctly', () => {

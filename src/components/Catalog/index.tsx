@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { IBook, ICategory } from "../../types";
 import Book from "../Book";
-import { BooksContainer, BooksSlider, Container, SeeMoreTitle, Title } from "./style"
+import { BooksContainer, BooksSlider, BorderCategory, BorderCategoryLast, CategoryContainer, CategoryDiv, CategoryStyle, Container, SeeMoreTitle, Title } from "./style"
 import Modal from "../Modal";
 import { getLocalStorage, setLocalStorage } from "../../storage";
 import { useTranslation } from "react-i18next";
@@ -52,7 +52,18 @@ const Catalog = ({ categories, books }: CatalogProps) => {
             categoriesToUse?.map((category: ICategory) => {
                 return (
                     <BooksContainer key={category.id}>
-                        <p>{category.name}</p>
+                        <CategoryContainer>
+                            <BorderCategory />
+                            <BorderCategory color="#FFF" />
+                            <BorderCategory color="#FFF" />
+                            <BorderCategory />
+                            <BorderCategory />
+                            <BorderCategory />
+                            <BorderCategoryLast />
+                            <CategoryDiv>
+                                <CategoryStyle>{category.name}</CategoryStyle>
+                            </CategoryDiv>
+                        </CategoryContainer>
                         <BooksSlider>
                             {getBooksByCategory(category)?.map((book: IBook) => {
                                 return (
